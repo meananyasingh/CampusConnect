@@ -44,7 +44,7 @@ function ForgotPasswordPage() {
         <h1 className="h2 fw-bold mb-3">Forgot your password?</h1>
         {submitted ? (
           <div className="alert alert-success mb-0" role="status">
-            If an active account exists for that email, reset instructions have been sent. During local development, the link appears in the Django terminal.
+            If an active account exists for that email, reset instructions have been sent.
           </div>
         ) : (
           <>

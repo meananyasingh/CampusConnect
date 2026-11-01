@@ -62,7 +62,7 @@ function CollegeStudentsPage() {
     setUpdatingId(student.id)
     try {
       replaceStudent(await analyticsService.resendStudentActivation(student.id))
-      toast.success('A fresh activation link was sent. Check the Django terminal during local development.')
+      toast.success('A fresh activation link was sent.')
     } catch (error) { toast.error(getApiErrorMessage(error)) } finally { setUpdatingId(null) }
   }
 

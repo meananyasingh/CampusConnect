@@ -6,17 +6,15 @@ Throughout this guide, replace `<username>` with your PythonAnywhere username.
 
 ## 1. Prepare the package on your computer
 
-Build the frontend, then package the project without the OS-specific and generated folders. Run in PowerShell:
+Build the frontend, then package the project without the OS-specific, generated, and private files. Run in PowerShell from the folder that contains the `CampusConnect` project folder (for example `E:\CampusConnect`):
 
 ```powershell
-cd E:\CampusConnect\CampusConnect\frontend
-npm run build
+npm --prefix CampusConnect\frontend run build
 
-cd E:\CampusConnect
-tar -czf campusconnect-deploy.tar.gz --exclude=.venv --exclude=node_modules --exclude=staticfiles --exclude=__pycache__ --exclude=CampusConnect/.env --exclude="Campus Connect Plan" CampusConnect
+tar -czf campusconnect-deploy.tar.gz --exclude=.venv --exclude=node_modules --exclude=staticfiles --exclude=__pycache__ --exclude=.git --exclude=CampusConnect/.env --exclude="Campus Connect Plan" --exclude="*Complete Codex Development Prompt.md" CampusConnect
 ```
 
-This creates `E:\CampusConnect\campusconnect-deploy.tar.gz`.
+This creates `campusconnect-deploy.tar.gz` next to the project folder.
 
 ## 2. Create the account and upload
 
@@ -124,5 +122,5 @@ Then click **Reload** on the **Web** tab.
 
 - **Emails are not delivered.** Password-reset and activation emails are written to the **Server log** on the Web tab. Open it to copy a link during the demo.
 - **Uploaded files are public by link.** Anyone with a resume or document URL can open it. Use demo data rather than real student files.
-- **Keep the app alive.** Free web apps stop after three months unless you click **Run until 3 months from today** on the Web tab.
+- **Keep the app alive.** Free web apps stop after one month unless you click **Run until 1 month from today** on the Web tab. PythonAnywhere emails a reminder a week before.
 - **Errors are logged, not shown.** With `DEBUG=False`, check the **Error log** on the Web tab when something fails.

@@ -295,4 +295,4 @@ PATCH /api/students/<id>/                    # college-scoped account management
 
 The student dashboard shows profile readiness, application progress, upcoming interviews, placement selections, and eligible skill-matched opportunities. The recruiter dashboard shows company hiring metrics, recent candidates, interview schedules, approved-college count, and opportunity performance. The admin analytics screen shows the application pipeline, monthly application activity, branch-wise placement performance, and company package statistics. All dashboard data is scoped by the authenticated role, company, or college. Student, application, and placement CSV reports contain only the authenticated administrator's college data.
 
-Before testing student signup, create at least one active college and academic program through Django Admin.
+Before testing student signup, create at least one active college and academic program through Django Admin at `http://127.0.0.1:8000/django-admin/`. The `/admin/...` paths belong to the React college-admin portal.

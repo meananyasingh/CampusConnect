@@ -23,7 +23,9 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from common.views import frontend_app
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # Django's admin site lives at /django-admin/ because /admin/... belongs to
+    # the React college-admin portal.
+    path('django-admin/', admin.site.urls),
     path('api/auth/', include('accounts.urls')),
     path('api/colleges/', include('colleges.urls')),
     path('api/companies/', include('companies.urls')),
@@ -51,5 +53,5 @@ if settings.DEBUG:
 
 # Must stay last: every other non-API path belongs to the React app.
 urlpatterns += [
-    re_path(r"^(?!(?:api|admin|static|media)(?:/|$)).*$", frontend_app, name="frontend-app"),
+    re_path(r"^(?!(?:api|django-admin|static|media)(?:/|$)).*$", frontend_app, name="frontend-app"),
 ]
