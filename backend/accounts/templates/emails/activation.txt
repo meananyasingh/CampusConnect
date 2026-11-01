@@ -1,0 +1,8 @@
+Hello {{ recipient_name }},
+
+{{ college_name }} created a CampusConnect student account for you.
+
+Use this secure link to choose your private password:
+{{ activation_url }}
+
+If you were not expecting this invitation, contact your college placement office.

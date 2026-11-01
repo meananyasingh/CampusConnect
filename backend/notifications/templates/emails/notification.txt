@@ -1,0 +1,10 @@
+Hello {{ notification.recipient.first_name|default:"there" }},
+
+{{ notification.title }}
+
+{{ notification.message }}
+{% if action_url %}
+Open CampusConnect: {{ action_url }}
+{% endif %}
+
+You can change email preferences from your CampusConnect notification centre.

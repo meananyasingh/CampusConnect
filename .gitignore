@@ -1,0 +1,34 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+.venv/
+backend/.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Django generated files
+backend/media/
+backend/staticfiles/
+*.log
+
+# Node and Vite
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Private planning documents (kept locally)
+Campus Connect Plan
+*Complete Codex Development Prompt.md
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
