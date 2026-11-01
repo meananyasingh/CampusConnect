@@ -2,6 +2,19 @@
 
 CampusConnect is a student career and placement management platform for students, recruiters, and college placement teams. It uses Django REST Framework for the backend and React for the frontend.
 
+## Live demo
+
+**https://campusconnectapp.pythonanywhere.com**
+
+| Portal | Link |
+|---|---|
+| Student | [Sign up](https://campusconnectapp.pythonanywhere.com/student/signup) · [Sign in](https://campusconnectapp.pythonanywhere.com/student/login) |
+| Recruiter | [Sign up](https://campusconnectapp.pythonanywhere.com/recruiter/signup) · [Sign in](https://campusconnectapp.pythonanywhere.com/recruiter/login) |
+| College admin | [Sign in](https://campusconnectapp.pythonanywhere.com/admin-login) |
+| API documentation | [Swagger UI](https://campusconnectapp.pythonanywhere.com/api/docs/) |
+
+The demo runs on PythonAnywhere's free plan, so emails are not delivered; password-reset and activation links are written to the server log. See the [User Manual](USER_MANUAL.md) for a complete guide to every feature and [DEPLOY_PYTHONANYWHERE.md](DEPLOY_PYTHONANYWHERE.md) for how the demo is deployed.
+
 ## Current status
 
 - Modular Django project structure
